@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.name{
+    height: 20vh;
+    width: 100%;
+    background: linear-gradient(to right bottom, red,green);
+    /* border: 1px solid black; */
+    position: relative;
+}
+.name h1{
+    color: yellow;
+    padding-top: 35px;
+    font-size: 50px;
+    /* text-transform: capitalize; */
+    position: absolute;
+    left: 38%;
+    
+}
+h1:hover{
+    cursor: pointer;
+    transform: skew(20deg);
+    color: cyan;
+    transition: 1s;
+}
+.balldiv{
+    height: 66vh;
+    width: 11vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    background:linear-gradient(to left bottom,rgb(0,228,201),rgb(0,148,40));
+    position: relative;
+    left: 100px;
+    top: 30px;
+    float: left;
+}
+.balldiv::after{
+    content: "";
+    height: 15vh;
+    position: absolute;
+    width: 64%;
+    border-radius: 100px;
+    border: 1px solid black;
+    left: 26px;
+    animation-name: ball;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    /* animation-fill-mode:backwards; */
+    animation-direction: alternate-reverse;
+    /* animation-timing-function:ease; */
+}
+@keyframes ball {
+    0%{
+        background-color: blue;
+        top: 0;
+    }
+    50%{
+        background-color: purple;
+    }
+    100%{
+        background-color: red;
+        top: 77.3%;
+    /* animation-duration: .5s; */
+
+    }
+}
+.load{
+    height: 8vh;
+    width: 35vw;
+    border-radius: 20px;
+    border: 1px solid black;
+    position: relative;
+    left: 220px;
+    top: 30px;
+    overflow: hidden;
+}
+.load::after{
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+    content: "";
+    animation-name: load;
+    position: absolute;
+    top:0;
+    left: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+@keyframes load{
+    0%{
+        left:-90%;
+        background-color: mediumvioletred;
+    }
+    25%{
+        background-color:red ;
+    }
+    50%{
+        background-color: purple;
+    }
+    75%{
+        background-color:blue;
+    }
+    100%{
+        left:0;
+        background-color: black;
+    }
+}
+.signal{
+    height: 55vh;
+    width: 35vw;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: relative;
+    left: 370px;
+    top: 40px;
+}
+.long{
+    position: relative;
+    top: 172px;
+    height: 50%;
+    width: 3.6vw;
+    background-color: cyan;
+    margin-left: 35px;
+    left: -130px;
+    float: left; 
+}
+.signal :nth-child(2) {
+    height: 33% !important;
+    top: 231px;
+}
+.signal :nth-child(4) {
+    left: 123px;
+    top: 59px;
+    height: 33%;
+}
+.signal :nth-last-child(1){
+    left: 123px;
+    top: 0px;
+}
